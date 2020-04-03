@@ -50,7 +50,11 @@
         
         
         
-    var borat = new Tone.Player ("borat.mp3");
+    var borat = new Tone.Player({
+       "retrigger" : true
+    });
+        borat.load("borat.mp3);
+        
     borat.connect(Tone.Master);
      
     
