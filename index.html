@@ -47,6 +47,12 @@
     var button = document.getElementById("button");
     hand.onclick = hand.ontouchstart = mouseActions;
     button.onclick = button.ontouchstart = mouseActions;
+        
+        
+        
+    var borat = new Tone.Player ("borat.mp3");
+    borat.connect(Tone.Master);
+     
     
     var slap = new Tone.Player({
        "retrigger" : true
@@ -59,6 +65,7 @@
     function mouseActions(event) {
         UnmuteButton().start();
         slap.start();
+        borat.start();
     }
     </script>
 
