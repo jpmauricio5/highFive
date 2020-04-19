@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang = "en"> 
+<html>
 <head>
-    <title>High Five Borat</title>
     <style>
     button {
         /* buttons blue with large white text */
@@ -38,7 +36,7 @@
 </head>
 <body>
     <div class="centred">
-        <img id="hand" src="hand.png" alt = "image of a hand"><br>
+        <img id="hand" src="hand.png"></img><br>
         <span class="rightTop">
             <button id="button">click me</button>
         </span>
@@ -50,25 +48,29 @@
     hand.onclick = hand.ontouchstart = mouseActions;
     button.onclick = button.ontouchstart = mouseActions;
         
-    
+        
+
     var borat = new Tone.Player({
-       "retrigger" : true
-    });
-        borat.load("borat.mp3");
+          "retrigger" : true
+       });
+    
+    borat.load( "borat.mp3" );
+
     borat.connect(Tone.Master);
-   
+     
     
     var slap = new Tone.Player({
        "retrigger" : true
     });
     
     slap.load( "slap.mp3" );
+    
     slap.connect(Tone.Master);
 
     function mouseActions(event) {
         UnmuteButton().start();
         slap.start();
-        borat.start(2);
+        borat.start();
     }
     </script>
 
