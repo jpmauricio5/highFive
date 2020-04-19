@@ -45,7 +45,9 @@
     <script>
     var hand = document.getElementById("hand");
     var button = document.getElementById("button");
-    hand.onclick = hand.ontouchstart = mouseActions;      
+    hand.onclick = hand.onclick = mouseActions;
+    button.onclick = button.onclick = mouseActions;
+        
         
 
     var borat = new Tone.Player({
