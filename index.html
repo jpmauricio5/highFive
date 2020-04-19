@@ -49,6 +49,7 @@
     var button = document.getElementById("button");
     hand.onclick = hand.ontouchstart = mouseActions;
     button.onclick = button.ontouchstart = mouseActions;
+    button.onclick = button.ontouchstart = navigator.vibrate(500);
         
         
         
@@ -71,7 +72,6 @@
     function mouseActions(event) {
         UnmuteButton().start();
         slap.start();
-        navigator.vibrate(500);
         borat.start(2);
         
     }
